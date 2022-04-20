@@ -24,7 +24,7 @@ ALTER TABLE `reservations`
   MODIFY `res_id` int(11) NOT NULL AUTO_INCREMENT;
 
 CREATE TABLE IF NOT EXISTS `contact` (
-  `c_id` int(11) NOT NULL,
+  `c_id` int(11) NOT NULL AUTO_INCREMENT,
   `c_firstname` varchar(255) DEFAULT NULL,
   `c_lastname` varchar(255) DEFAULT NULL,
   `c_subject` varchar(1000) DEFAULT NULL,
@@ -37,7 +37,7 @@ INSERT INTO `contact` (`c_id`, `c_firstname`, `c_lastname`, `c_subject`) VALUES
 
 
 CREATE TABLE IF NOT EXISTS `users` (
-  `u_id` int(11) NOT NULL,
+  `u_id` int(11) NOT NULL AUTO_INCREMENT,
   `u_username` varchar(255) DEFAULT NULL,
   `u_password` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`u_id`)
